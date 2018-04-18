@@ -8,7 +8,7 @@ class Hole{
 }
 
 class Process{
-    constructor(name, size){
+    constructor(name, size, startingAt=0, endingAt=0){
         this.name=name;
         this.size=size;
         this.startingAt=startingAt;
