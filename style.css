@@ -1,19 +1,24 @@
-h1, h2 {
+
+h1, h2, h3 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: brown
 }
 
-.row {
+.row1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1em;
 }
-.col {
+.col1 {
     background-color: aqua;
     text-align: center;
     min-height: 40vh;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+#init{
+    text-align: center
 }
 
 button {
@@ -26,10 +31,32 @@ button {
     transition: all .2s;
     border-radius: 10px;
     outline: 0;
+    margin-bottom: 40px
 }
 button:hover {
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.356);
     border-radius: 15px;
     width: 11vw;
     height: 5.5vh;
+}
+
+#impressButton {
+    background-color: rgba(14, 10, 10, 0.42);
+    width: 12vw;
+    margin-bottom: 10px;
+    border-radius: 20px
+}
+
+input, select {
+    border-radius: 10px;
+    width:150px;
+    height: 25px;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+    outline: 0
+}
+
+select {
+    padding-left: 10px;
 }
