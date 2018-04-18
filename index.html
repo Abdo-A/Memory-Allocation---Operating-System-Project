@@ -10,7 +10,7 @@
         <div class="row1">
 
             <div class="col1">
-                <h2 class="col-header">Holes?</h2>
+                <h2 class="col-header" id="holesHeader">Holes?</h2>
 
                 <div id="holesInput">
                 </div>
@@ -20,7 +20,7 @@
             </div>
 
             <div class="col1">
-                <h2 class="col-header">Processes?</h2>
+                <h2 class="col-header" id="processesHeader">Processes?</h2>
 
                 <div id="processesInput">
                 </div>
@@ -30,9 +30,9 @@
             </div>
 
             <div class="col1">
-                <h2 class="col-header">Type?</h2>
+                <h2 class="col-header" id="typeHeader">Type?</h2>
                 <h3>Choose the type that 'fits' you ;)</h3>
-                <select id="type">
+                <select id="type" onclick="handleTypeSelect()">
                     <option value="firstFit" selected>First Fit</option>
                     <option value="bestFit">Best Fit</option>
                     <option value="worstFit">Worst Fit</option>
@@ -49,7 +49,8 @@
         <script src="classes.js"></script>        
         <script src="includes/definitions.js"></script>
         <script src="includes/routine.js"></script>
-        <script src="includes/handlers.js"></script>        
+        <script src="includes/handlers.js"></script>    
+        <script src="includes/execute.js"></script>                    
         <script src="script.js"></script>
     </body>
 </html>
