@@ -1,0 +1,35 @@
+h1, h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: brown
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+}
+.col {
+    background-color: aqua;
+    text-align: center;
+    min-height: 40vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+button {
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 10px;
+    outline: 0;
+}
+button:hover {
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.356);
+    border-radius: 15px;
+    width: 11vw;
+    height: 5.5vh;
+}

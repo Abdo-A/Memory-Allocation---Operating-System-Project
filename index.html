@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OS Memory</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="header">Memory Allocation (Best project ever?)</h1>
+
+        <div class="row">
+
+            <div class="col">
+                <h2 class="col-header">Holes?</h2>
+                <div id="holesInput">
+                    Hole 1
+                    <input type="text" placeholder="Size">
+                    <input type="text" placeholder="Starting From"><br>
+                </div>
+                <br>
+                <button onclick="addAHole()">Add a hole</button>
+            </div>
+
+            <div class="col">
+                <h2 class="col-header">Processes?</h2>
+                <div id="processesInput">
+                    Process 1
+                    <input type="text" placeholder="Size"><br>
+                </div>
+                <br>
+                <button onclick="addAProcess()">Add a Process</button>                
+            </div>
+
+            <div class="col">
+                <h2 class="col-header">Type?</h2>                
+            </div>
+        </div>
+        
+        <div id="test"></div>
+
+        <script src="includes/definitions.js"></script>        
+        <script src="script.js"></script>
+    </body>
+</html>
