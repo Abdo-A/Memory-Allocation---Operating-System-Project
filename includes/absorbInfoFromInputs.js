@@ -1,4 +1,7 @@
 function absorbInfoFromInputs(){
+
+    type=document.getElementById("type").value;
+
     for(let i=1;i<=holesNumber;i++){
         //declaring the dynamic named variables
         window[`hole${i}Name`]=document.getElementById(`hole${i}Name`).value;
@@ -16,4 +19,11 @@ function absorbInfoFromInputs(){
         //each array element is a Process object
         processesArray[i-1]=new Process(window[`process${i}Name`], window[`process${i}Size`]);
     }
+
+    //Sorting the holes array:
+    holesArray.sort((a,b)=>{
+        return a.startingAt-b.startingAt;
+    });
+
+    routine();
 }

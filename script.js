@@ -11,7 +11,19 @@ function addAProcess(){
 
 //Showing the result
 function impress(){
+
     absorbInfoFromInputs();
-    type=document.getElementById("type").value;
-    draw();
+
+    constructMemory();
+    
+    if(type=="firstFit"){
+
+    }
+    if(type=="bestFit"){
+
+    }
+    if(type=="worstFit"){
+
+    }
+    //draw();
 }

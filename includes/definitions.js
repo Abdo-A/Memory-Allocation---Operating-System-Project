@@ -20,3 +20,9 @@ let holesNumber=0;
 let processesNumber=0;
 let selectCheck=false;
 let type;
+
+//Memory variables
+let memory=[];
+let currentMemoryPosition=0;
+let lastMemoryPosition; //notice that firstMemoryPosition is 0
+let memoryBlocksNumber=0;
