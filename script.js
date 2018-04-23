@@ -15,9 +15,9 @@ function impress(){
     absorbInfoFromInputs();
 
     constructMemory();
-    
-    if(type=="firstFit"){
 
+    if(type=="firstFit"){
+        allocateFF();
     }
     if(type=="bestFit"){
 

@@ -26,3 +26,4 @@ let memory=[];
 let currentMemoryPosition=0;
 let lastMemoryPosition; //notice that firstMemoryPosition is 0
 let memoryBlocksNumber=0;
+let emptyMemory=[];

@@ -6,7 +6,7 @@ function constructMemory(){
     let i=0; //i is the memory blocks counter
     let j=0; //j is the holes counter
 
-    while(j<=holesNumber-1){ //i is the memory blocks counter
+    while(j<=holesNumber-1){
         if(holesArray[j].startingAt==currentMemoryPosition){
             memory[i]=new Block("hole", currentMemoryPosition, holesArray[j].endingAt, holesArray[j].endingAt-currentMemoryPosition);
             currentMemoryPosition=holesArray[j].endingAt;
@@ -17,6 +17,6 @@ function constructMemory(){
         }
         i++;
     }
-    console.log(memory);
     memoryBlocksNumber=i;
+    emptyMemory=memory.slice(); // to copy the array by value
 }
