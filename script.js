@@ -16,10 +16,11 @@ function impress(){
 
     constructMemory();
 
+    mixConsecutiveHoles();
+    console.log(memory);
+    console.log(memoryBlocksNumber);
+
     if(type=="firstFit"){
-        console.log(memory);
-        allocateFF(processesArray[0]);
-        console.log(memory);
     }
     if(type=="bestFit"){
 
@@ -28,4 +29,14 @@ function impress(){
 
     }
     //draw();
+}
+
+function allocateFirstProcess(){
+    allocateFF(processesArray[0]);
+    console.log(memory);
+}
+
+function deallocateFirstProcess(){
+    deallocateFF(processesArray[0]);
+    console.log(memory);
 }

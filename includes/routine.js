@@ -11,4 +11,11 @@ function routine(){
     if (selectCheck){
         document.getElementById("typeHeader").innerHTML="Type";
     }
+
+    if (inputError){
+
+    }
+    if (allocationError){
+
+    }
 }
