@@ -17,7 +17,9 @@ function impress(){
     constructMemory();
 
     if(type=="firstFit"){
-        allocateFF();
+        console.log(memory);
+        allocateFF(processesArray[0]);
+        console.log(memory);
     }
     if(type=="bestFit"){
 
