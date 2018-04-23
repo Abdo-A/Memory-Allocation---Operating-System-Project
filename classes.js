@@ -26,5 +26,6 @@ class Block{
         this.startingAt=startingAt;
         this.endingAt=endingAt;   
         this.size=size;
+        this.uniqueIdentifier=Math.random();
     }
 }

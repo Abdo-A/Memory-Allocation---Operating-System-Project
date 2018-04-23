@@ -18,6 +18,9 @@ function constructMemory(){
         }
         i++;
     }
+    
+    mixConsecutiveHoles();
+
     memoryBlocksNumber=i;
-    emptyMemory=memory.slice(); // to copy the array by value
+    emptyMemory=memory.slice(); // to copy the empty memory array by value
 }

@@ -16,7 +16,6 @@ function impress(){
 
     constructMemory();
 
-    mixConsecutiveHoles();
     console.log(memory);
     console.log(memoryBlocksNumber);
 
@@ -32,11 +31,11 @@ function impress(){
 }
 
 function allocateFirstProcess(){
-    allocateFF(processesArray[0]);
+    allocateBF(processesArray[0]);
     console.log(memory);
 }
 
 function deallocateFirstProcess(){
-    deallocateFF(processesArray[0]);
+    deallocate(processesArray[0]);
     console.log(memory);
 }

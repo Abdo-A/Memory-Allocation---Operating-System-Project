@@ -1,4 +1,4 @@
-function deallocateFF(p){
+function deallocate(p){
     let i=0; //i is the memory blocks counter
 
     let deallocatedCheck=false;
