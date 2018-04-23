@@ -1,8 +1,3 @@
-function allocateBF(){
-
-};
-
-
 function deallocateBF(){
     
 }

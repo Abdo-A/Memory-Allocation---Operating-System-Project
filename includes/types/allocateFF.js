@@ -5,6 +5,7 @@ function allocateFF(p){ //Where p is the passed process
         if(memory[i].blockType=="hole" && p.size==memory[i].size){
             memory[i].blockType="process";
             memory[i].blockName=p.name;
+            holesNumber--;
             waitingCheck=false;
             break;
         }
@@ -22,10 +23,7 @@ function allocateFF(p){ //Where p is the passed process
     }
     if(waitingCheck){
         p.isWaiting=true;
+    } else {
+        p.state="allocated";        
     }
 };
-
-
-function deallocateFF(){
-
-}

@@ -9,12 +9,13 @@ class Hole{
 }
 
 class Process{
-    constructor(name, size, startingAt=0, endingAt=0, isWaiting=false){
+    constructor(name, size, startingAt=0, endingAt=0, isWaiting=false, state="deallocated"){
         this.name=name;
         this.size=size;
         this.startingAt=startingAt;
         this.endingAt=endingAt;
         this.isWaiting=isWaiting;
+        this.state=state;
     }
 }
 

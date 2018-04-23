@@ -1,8 +1,3 @@
-function allocateWF(){
-
-};
-
-
 function deallocateWF(){
     
 }

@@ -20,6 +20,8 @@ let holesNumber=0;
 let processesNumber=0;
 let selectCheck=false;
 let type;
+let inputError="";
+let allocationError="";
 
 //Memory variables
 let memory=[];
