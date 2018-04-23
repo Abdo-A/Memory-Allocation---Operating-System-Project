@@ -18,8 +18,9 @@ class Process{
 }
 
 class Block{
-    constructor(blockType, startingAt=0, endingAt=0, size){
+    constructor(blockType, blockName, startingAt=0, endingAt=0, size){
         this.blockType=blockType;
+        this.blockName=blockName;        
         this.startingAt=startingAt;
         this.endingAt=endingAt;   
         this.size=size;

@@ -1,5 +1,6 @@
 function constructMemory(){
 
+    memory=[];
     currentMemoryPosition=0;
     lastMemoryPosition=holesArray[holesNumber-1].endingAt;
 
@@ -8,11 +9,11 @@ function constructMemory(){
 
     while(j<=holesNumber-1){
         if(holesArray[j].startingAt==currentMemoryPosition){
-            memory[i]=new Block("hole", currentMemoryPosition, holesArray[j].endingAt, holesArray[j].endingAt-currentMemoryPosition);
+            memory[i]=new Block("hole", holesArray[j].name, currentMemoryPosition, holesArray[j].endingAt, holesArray[j].endingAt-currentMemoryPosition);
             currentMemoryPosition=holesArray[j].endingAt;
             j++;
         } else {
-            memory[i]=new Block("nothing", currentMemoryPosition, holesArray[j].startingAt, holesArray[j].startingAt-currentMemoryPosition);            
+            memory[i]=new Block("nothing", "nothing", currentMemoryPosition, holesArray[j].startingAt, holesArray[j].startingAt-currentMemoryPosition);            
             currentMemoryPosition=holesArray[j].startingAt;            
         }
         i++;
