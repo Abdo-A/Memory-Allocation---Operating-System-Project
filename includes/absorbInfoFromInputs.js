@@ -25,5 +25,14 @@ function absorbInfoFromInputs(){
         return a.startingAt-b.startingAt;
     });
 
+    for(let i=1;i<holesNumber;i++){
+        if(holesArray[i].startingAt<holesArray[i-1].endingAt){
+            holesArray[i-1].endingAt=holesArray[i].endingAt;
+            holesArray[i-1].size=holesArray[i-1].endingAt-holesArray[i-1].startingAt;
+            holesArray.splice(i,1); //to remove the element of index i
+            holesNumber--;
+        }
+    }    
+
     routine();
 }
