@@ -20,11 +20,18 @@ function execute(i, task){
 
 
     //Handling if we can't allocate it
-    if(allocationSuccess==0){
+    if(allocationSuccess==0){ 
         if(task=="allocate"){
-            let index = allocationError.indexOf(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+            let index = allocationError.indexOf(`${processesArray[i].name} can't be allocated.`);
             if(index==-1){
-                allocationError.push(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+                allocationError.push(`${processesArray[i].name} can't be allocated.`);
+            }
+        }
+    } else {
+        if(task=="allocate"){
+            let index = allocationError.indexOf(`${processesArray[i].name} can't be allocated.`);
+            if(index!=-1){
+                allocationError.splice(index,1);
             }
         }
     }
@@ -103,9 +110,16 @@ function executeAll(task){
             //Handling if we can't allocate it
             if(allocationSuccess==0){
                 if(task=="allocate"){
-                    let index = allocationError.indexOf(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+                    let index = allocationError.indexOf(`${processesArray[i].name} can't be allocated.`);
                     if(index==-1){
-                        allocationError.push(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+                        allocationError.push(`${processesArray[i].name} can't be allocated.`);
+                    }
+                }
+            } else {
+                if(task=="allocate"){
+                    let index = allocationError.indexOf(`${processesArray[i].name} can't be allocated.`);
+                    if(index!=-1){
+                        allocationError.splice(index,1);
                     }
                 }
             }

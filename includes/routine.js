@@ -17,8 +17,7 @@ function routine(){
 
     }
 
-    console.log(allocationError);
-    allocationError.innerHTML=``;
+    allocationErrorArea.innerHTML='';
     for(let i=0;i<allocationError.length;i++){
         allocationErrorArea.innerHTML+=`<h3>${allocationError[i]}</h3><br>`;
     }
