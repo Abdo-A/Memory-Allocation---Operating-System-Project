@@ -1,22 +1,35 @@
 function execute(i, task){
+    let allocationSuccess;
 
     if(type=="firstFit"&&task=="allocate"){
-        allocateFF(processesArray[i]);
+        allocationSuccess=allocateFF(processesArray[i]);
         draw();
     }
     else if(type=="bestFit"&&task=="allocate"){
-        allocateBF(processesArray[i]);
+        allocationSuccess=allocateBF(processesArray[i]);
         draw();
     }
     else if(type=="worstFit"&&task=="allocate"){
-        allocateWF(processesArray[i]);
+        allocationSuccess=allocateWF(processesArray[i]);
         draw();
     }
     else if(task=="deallocate"){
         deallocate(processesArray[i]);
         draw();
     }
-    
+
+
+    //Handling if we can't allocate it
+    if(allocationSuccess==0){
+        if(task=="allocate"){
+            let index = allocationError.indexOf(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+            if(index==-1){
+                allocationError.push(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+            }
+        }
+    }
+
+
     //To disable or enable each two buttons of each process
     if(processesArray[i].state=="deallocated"){
         document.getElementById(`d${i}`).setAttribute("disabled", "");
@@ -57,6 +70,7 @@ function execute(i, task){
         document.getElementById("deallocateAllButton").style.backgroundColor="brown";
     }
 
+    routine();
 };
 
 
@@ -64,19 +78,21 @@ function execute(i, task){
 
 function executeAll(task){
 
+    let allocationSuccess;
+
     if(task=="allocateAll"){
         for(let i=0;i<processesNumber;i++){
             if(type=="firstFit"){
-                allocateFF(processesArray[i]);                
+                allocationSuccess=allocateFF(processesArray[i]);                
             }
             else if(type=="bestFit"){
-                allocateBF(processesArray[i]);                
+                allocationSuccess=allocateBF(processesArray[i]);                
             }
             else if(type=="worstFit"){
-                allocateWF(processesArray[i]);
+                allocationSuccess=allocateWF(processesArray[i]);
             }
             
-            //Disable all the allocation buttons
+            //Disable the allocation buttons
             if(processesArray[i].state=="allocated"){            
                 document.getElementById(`a${i}`).setAttribute("disabled", "");
                 document.getElementById(`a${i}`).style.backgroundColor="rgba(14, 10, 10, 0.42)";
@@ -84,7 +100,18 @@ function executeAll(task){
                 document.getElementById(`d${i}`).style.backgroundColor="brown"; 
             }
 
+            //Handling if we can't allocate it
+            if(allocationSuccess==0){
+                if(task=="allocate"){
+                    let index = allocationError.indexOf(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+                    if(index==-1){
+                        allocationError.push(`${processesArray[i].name} will be waiting for a deallocation to happen..`);
+                    }
+                }
+            }
+
         }
+
         draw();
     }
 
@@ -92,7 +119,7 @@ function executeAll(task){
         for(let i=0;i<processesNumber;i++){
             deallocate(processesArray[i]);
             
-            //Disable all the deallocation buttons
+            //Disable the deallocation buttons
             if(processesArray[i].state=="deallocated"){
                 document.getElementById(`d${i}`).setAttribute("disabled", "");
                 document.getElementById(`d${i}`).style.backgroundColor="rgba(14, 10, 10, 0.42)";
@@ -103,6 +130,8 @@ function executeAll(task){
         }
         draw();
     }
+
+
 
     //To disable or enable the two ALL buttons
     let allAllocatedCheck=0;
@@ -131,4 +160,6 @@ function executeAll(task){
         document.getElementById("deallocateAllButton").removeAttribute("disabled");
         document.getElementById("deallocateAllButton").style.backgroundColor="brown";
     }
+
+    routine();
 };

@@ -12,6 +12,9 @@ function addAProcess(){
 //Showing the result
 function impress(){
 
+    inputError='';
+    allocationError=[];
+
     absorbInfoFromInputs();
 
     constructMemory();

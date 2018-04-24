@@ -6,6 +6,8 @@ let holesInput = document.getElementById("holesInput");
 let processesInput = document.getElementById("processesInput");
 let test = document.getElementById("test");
 let answer = document.getElementById("answer");
+let inputErrorArea = document.getElementById("inputErrorArea");
+let allocationErrorArea = document.getElementById("allocationErrorArea");
 
 //Dom Elements: buttons
 let impressButton=document.getElementById("impressButton");
@@ -20,8 +22,8 @@ let holesNumber=0;
 let processesNumber=0;
 let selectCheck=false;
 let type;
-let inputError="";
-let allocationError="";
+let inputError='';
+let allocationError=[];
 
 //Memory variables
 let memory=[];

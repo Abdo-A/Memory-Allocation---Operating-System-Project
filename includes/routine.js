@@ -12,11 +12,15 @@ function routine(){
         document.getElementById("typeHeader").innerHTML="Type";
     }
 
+    inputErrorArea.innerHTML=``;
     if (inputError){
 
     }
-    if (allocationError){
 
+    console.log(allocationError);
+    allocationError.innerHTML=``;
+    for(let i=0;i<allocationError.length;i++){
+        allocationErrorArea.innerHTML+=`<h3>${allocationError[i]}</h3><br>`;
     }
 
     
