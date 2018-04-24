@@ -27,15 +27,32 @@ function impress(){
     if(type=="worstFit"){
 
     }
-    //draw();
+    for(let i=0;i<processesNumber;i++){
+
+        test.innerHTML+=`<b>${processesArray[i].name}</b>
+        <button onclick="execute(${i}, 'allocate')">Allocate</button>
+        <button onclick="execute(${i}, 'deallocate')">Deallocate</button>
+        <br>`;
+    }
 }
 
-function allocateFirstProcess(){
-    allocateBF(processesArray[0]);
-    console.log(memory);
-}
+function execute(i, task){
+    absorbInfoFromInputs();
+    if(type=="firstFit"&&task=="allocate"){
+        allocateFF(processesArray[i]);
+        draw();
+    }
+    else if(type=="bestFit"&&task=="allocate"){
+        allocateBF(processesArray[i]);
+        draw();
+    }
+    else if(type=="worstFit"&&task=="allocate"){
+        allocateWF(processesArray[i]);
+        draw();
+    }
+    else {
+        deallocate(processesArray[i]);
+        draw();
+    }
+};
 
-function deallocateFirstProcess(){
-    deallocate(processesArray[0]);
-    console.log(memory);
-}
