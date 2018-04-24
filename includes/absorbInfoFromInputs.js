@@ -2,6 +2,9 @@ function absorbInfoFromInputs(){
 
     type=document.getElementById("type").value;
 
+    holesArray=[];
+    processesArray=[];
+
     for(let i=1;i<=holesNumber;i++){
         //declaring the dynamic named variables
         window[`hole${i}Name`]=document.getElementById(`hole${i}Name`).value;

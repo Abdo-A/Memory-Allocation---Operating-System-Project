@@ -33,7 +33,7 @@ button {
     outline: 0;
     margin-bottom: 40px
 }
-button:hover {
+button:hover:not(.allocationButton):not(.deallocationButton):not(#impressButton) {
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.356);
     border-radius: 15px;
     width: 11vw;
