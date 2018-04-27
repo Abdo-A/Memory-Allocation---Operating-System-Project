@@ -20,6 +20,7 @@ function impress(){
     constructMemory();
 
     mixConsecutiveHoles();
+    mixConsecutiveHoles();
 
     draw();    
 

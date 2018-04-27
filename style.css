@@ -17,8 +17,13 @@ h1, h2, h3 {
 .col1 {
     background-color: aqua;
     text-align: center;
-    min-height: 40vh;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    height: 80vh;
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+}
+
+.col_part1, .col_part2 {
+    height: 40vh;
+    overflow: auto
 }
 
 #init{
@@ -66,27 +71,23 @@ select {
 }
 
 #answer {
-    height:50vh
+    height:50vh;
 }
 
 .memoryBlockContainer {
-    position: relative
-}
-
-.startingAtLabel:not(:first-of-type){
-    display: none;
-    opacity: 0
+    position: relative    
 }
 
 .label {
-    position: absolute;
-    left: -20px;
 }
 
 .startingAtLabel {
-    
+    position: absolute;
+    left: -19px;
+    top: -27px
 }
 
 .endingAtLabel {
-
+    position: absolute;
+    left: -22px;
 }
