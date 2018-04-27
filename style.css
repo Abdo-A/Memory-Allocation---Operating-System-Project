@@ -17,13 +17,14 @@ h1, h2, h3 {
 .col1 {
     background-color: aqua;
     text-align: center;
-    height: 80vh;
-    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+    height: 95vh;
+    align-content: center
 }
 
 .col_part1, .col_part2 {
-    height: 40vh;
-    overflow: auto
+    height: 47vh;
+    overflow: auto;
+    text-align: center
 }
 
 #init{
@@ -42,6 +43,7 @@ button {
     outline: 0;
     margin-bottom: 40px
 }
+
 button:hover:not(.allocationButton):not(.deallocationButton):not(#impressButton) {
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.356);
     border-radius: 15px;
@@ -53,7 +55,8 @@ button:hover:not(.allocationButton):not(.deallocationButton):not(#impressButton)
     background-color: rgba(14, 10, 10, 0.42);
     width: 12vw;
     margin-bottom: 10px;
-    border-radius: 20px
+    border-radius: 20px;
+    margin-top: 50px
 }
 
 input, select {
@@ -70,8 +73,16 @@ select {
     padding-left: 10px;
 }
 
+#answer_init{
+    margin-left: -27vh;
+    margin-top: 42vh;
+}
+
 #answer {
     height:50vh;
+    align-content: center;
+    margin-top: 20vh;
+    margin-left: 30vh
 }
 
 .memoryBlockContainer {

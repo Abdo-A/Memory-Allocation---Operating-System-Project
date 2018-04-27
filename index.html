@@ -26,39 +26,30 @@
             </div>
 
             <div class="col1">
-                    <div class="col_part1">
-                        a
-                        
+                <div class="col_part1">
+                    <h2 class="col-header" id="typeHeader">Type?</h2>
+                    <h3>Choose the type that 'fits' you ;)</h3>
+                    <select id="type" onclick="handleTypeSelect()">
+                        <option value="firstFit" selected>First Fit</option>
+                        <option value="bestFit">Best Fit</option>
+                        <option value="worstFit">Worst Fit</option>
+                    </select>
+                    <div id="init">
+                        <button id="impressButton" onclick="impress()">Done</button>
                     </div>
-                    <hr>
-                    <div class="col_part2">
-                        
-                        b
-                    </div>       
+                </div>
+                <hr>
+                <div class="col_part2">
+                    
+                    <div id="test"></div>
+                    <div id="inputErrorArea"></div>
+                    <div id="allocationErrorArea"></div>
+
+                </div>       
             </div>
 
             <div class="col1">
-                <h2 class="col-header" id="typeHeader">Type?</h2>
-                <h3>Choose the type that 'fits' you ;)</h3>
-                <select id="type" onclick="handleTypeSelect()">
-                    <option value="firstFit" selected>First Fit</option>
-                    <option value="bestFit">Best Fit</option>
-                    <option value="worstFit">Worst Fit</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="init">
-            <button id="impressButton" onclick="impress()">Impress me!</button>
-        </div>
-
-        <div class="row1">
-            <div id="test"></div>
-
-            <div id="answer"></div>
-            <div>
-                <div id="inputErrorArea"></div>
-                <div id="allocationErrorArea"></div>
+                <div id="answer"><h3 id="answer_init">The memory will appear here!</h3></div>                
             </div>
         </div>
 
