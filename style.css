@@ -64,3 +64,29 @@ input, select {
 select {
     padding-left: 10px;
 }
+
+#answer {
+    height:50vh
+}
+
+.memoryBlockContainer {
+    position: relative
+}
+
+.startingAtLabel:not(:first-of-type){
+    display: none;
+    opacity: 0
+}
+
+.label {
+    position: absolute;
+    left: -20px;
+}
+
+.startingAtLabel {
+    
+}
+
+.endingAtLabel {
+
+}

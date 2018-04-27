@@ -19,6 +19,8 @@ function impress(){
 
     constructMemory();
 
+    mixConsecutiveHoles();
+
     draw();    
 
     addFunctionalButtons();
