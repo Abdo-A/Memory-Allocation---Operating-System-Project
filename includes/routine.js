@@ -19,7 +19,7 @@ function routine(){
     allocationErrorArea.innerHTML='';
     for(let i=0;i<allocationError.length;i++){
         if(allocationError[i])
-            allocationErrorArea.innerHTML+=`<h3>${allocationError[i]}</h3><br>`;
+            allocationErrorArea.innerHTML+=`<p style="margin:-10px">${allocationError[i]}</p><br>`;
     }
 
     

@@ -21,6 +21,7 @@ function impress(){
 
     mixConsecutiveHoles();
     mixConsecutiveHoles();
+    mixConsecutiveHoles();    
 
     draw();    
 
