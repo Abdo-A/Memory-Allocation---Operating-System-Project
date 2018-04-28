@@ -2,8 +2,9 @@ function absorbInfoFromInputs(){
 
     type=document.getElementById("type").value;
 
-    // holesArray=[];
-    // processesArray=[];
+    holesArray=[];
+    processesArray=[];
+    memoryBlocksNumber=0;
 
     for(let i=1;i<=holesNumber;i++){
         //declaring the dynamic named variables
