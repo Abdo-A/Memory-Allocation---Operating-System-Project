@@ -44,7 +44,7 @@ button {
     margin-bottom: 40px
 }
 
-button:hover:not(.allocationButton):not(.deallocationButton):not(#impressButton) {
+button:hover:not(.allocationButton):not(.deallocationButton) {
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.356);
     border-radius: 15px;
     width: 11vw;
@@ -81,7 +81,6 @@ select {
     
 }
 
-
 #answer {
     height:70vh;
     width: 100px;
@@ -101,7 +100,7 @@ select {
 }
 
 .memoryBlockContainer {
-    position: relative    
+    position: relative;
 }
 
 .label {
@@ -116,4 +115,10 @@ select {
 .endingAtLabel {
     position: absolute;
     left: -16px;
+}
+
+#blockType {
+    color: white;
+    text-transform: capitalize;
+    margin: 0;
 }

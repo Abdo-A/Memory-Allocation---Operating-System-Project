@@ -109,14 +109,14 @@ function executeAll(task){
 
             //Handling if we can't allocate it
             if(allocationSuccess==0){
-                if(task=="allocate"){
+                if(task=="allocateAll"){
                     let index = allocationError.indexOf(`${processesArray[i].name} can't be allocated.`);
                     if(index==-1){
                         allocationError.push(`${processesArray[i].name} can't be allocated.`);
                     }
                 }
             } else {
-                if(task=="allocate"){
+                if(task=="allocateAll"){
                     let index = allocationError.indexOf(`${processesArray[i].name} can't be allocated.`);
                     if(index!=-1){
                         allocationError.splice(index,1);
@@ -144,7 +144,6 @@ function executeAll(task){
         }
         draw();
     }
-
 
 
     //To disable or enable the two ALL buttons

@@ -18,10 +18,10 @@ function draw(){
                 class="memoryBlock"
                 style="width:100px;
                 height:${blockHeight}vh;
-                background-color:#${blockColorCode};
+                background-color:#${memory[i].colorCode};
                 "
                 >
-                ${memory[i].blockType}
+                <p id="blockType">${memory[i].blockType}</p>
                 </div>
                 <h5 class="endingAtLabel label"
                 style="top:${labelTop}vh"
@@ -37,10 +37,10 @@ function draw(){
                 class="memoryBlock"
                 style="width:100px;
                 height:${blockHeight}vh;
-                background-color:#${blockColorCode};               
+                background-color:#${memory[i].colorCode};               
                 "
                 >
-                ${memory[i].blockType}
+                <p id="blockType">${memory[i].blockType}</p>                
                 </div>
             </div>
             `;
