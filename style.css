@@ -108,13 +108,13 @@ select {
 
 .startingAtLabel {
     position: absolute;
-    left: -16px;
+    left: -28px;
     top: -27px
 }
 
 .endingAtLabel {
     position: absolute;
-    left: -16px;
+    left: -28px;
 }
 
 #blockType {
