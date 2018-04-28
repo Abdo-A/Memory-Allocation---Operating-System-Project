@@ -1,4 +1,9 @@
 function deallocate(p){
+
+    if(p.state=="deallocated"){
+        return 1;
+    }
+
     let i=0; //i is the memory blocks counter
 
     let deallocatedCheck=false;

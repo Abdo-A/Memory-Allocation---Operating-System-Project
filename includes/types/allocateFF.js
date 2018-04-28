@@ -1,4 +1,7 @@
 function allocateFF(p){ //Where p is the passed process
+    if(p.state=="allocated"){
+        return 1;
+    }
     let i=0; //i is the memory blocks counter
     let allocatedCheck=false;
     while(i<memoryBlocksNumber){

@@ -1,5 +1,9 @@
 function allocateBF(p){
 
+    if(p.state=="allocated"){
+        return 1;
+    }
+
     //Putting the memory blocks into the order that will suit this type
     memory.sort((a,b)=>{
         return a.size-b.size;
