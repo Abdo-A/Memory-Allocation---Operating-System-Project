@@ -10,40 +10,80 @@ function draw(){
         let labelTop=(memory[i].size / memoryHeight) * 70 - (0.2*(memory[i].size / memoryHeight) * 70);
         let blockColorCode=Math.floor(Math.random()*(999999-111111+1))+111111;
 
-        if(i==memoryBlocksNumber-1){
-            answer.innerHTML+=`
-            <div class="memoryBlockContainer">
-                <h5 class="startingAtLabel label">${memory[i].startingAt}</h5>            
-                <div
-                class="memoryBlock"
-                style="width:100px;
-                height:${blockHeight}vh;
-                background-color:#${memory[i].colorCode};
-                "
-                >
-                <p id="blockType">${memory[i].blockType}</p>
+        if(memory[i].blockType=="process"){
+            
+            if(i==memoryBlocksNumber-1){
+                answer.innerHTML+=`
+                <div class="memoryBlockContainer">
+                    <h5 class="startingAtLabel label">${memory[i].startingAt}</h5>            
+                    <div
+                    class="memoryBlock"
+                    style="width:100px;
+                    height:${blockHeight}vh;
+                    background-color:#${memory[i].colorCode};
+                    "
+                    >
+                    <p id="blockType">${memory[i].blockName}</p>
+                    </div>
+                    <h5 class="endingAtLabel label"
+                    style="top:${labelTop}vh"
+                    >${memory[i].endingAt}</h5>
                 </div>
-                <h5 class="endingAtLabel label"
-                style="top:${labelTop}vh"
-                >${memory[i].endingAt}</h5>
-            </div>
-            `;
+                `;
+            }
+            else {
+                answer.innerHTML+=`
+                <div class="memoryBlockContainer">
+                    <h5 class="startingAtLabel label">${memory[i].startingAt}</h5>
+                    <div
+                    class="memoryBlock"
+                    style="width:100px;
+                    height:${blockHeight}vh;
+                    background-color:#${memory[i].colorCode};               
+                    "
+                    >
+                    <p id="blockType">${memory[i].blockName}</p>                
+                    </div>
+                </div>
+                `;
+            }
         }
         else {
-            answer.innerHTML+=`
-            <div class="memoryBlockContainer">
-                <h5 class="startingAtLabel label">${memory[i].startingAt}</h5>
-                <div
-                class="memoryBlock"
-                style="width:100px;
-                height:${blockHeight}vh;
-                background-color:#${memory[i].colorCode};               
-                "
-                >
-                <p id="blockType">${memory[i].blockType}</p>                
+            if(i==memoryBlocksNumber-1){
+                answer.innerHTML+=`
+                <div class="memoryBlockContainer">
+                    <h5 class="startingAtLabel label">${memory[i].startingAt}</h5>            
+                    <div
+                    class="memoryBlock"
+                    style="width:100px;
+                    height:${blockHeight}vh;
+                    background-color:#${memory[i].colorCode};
+                    "
+                    >
+                    <p id="blockType">${memory[i].blockType}</p>
+                    </div>
+                    <h5 class="endingAtLabel label"
+                    style="top:${labelTop}vh"
+                    >${memory[i].endingAt}</h5>
                 </div>
-            </div>
-            `;
+                `;
+            }
+            else {
+                answer.innerHTML+=`
+                <div class="memoryBlockContainer">
+                    <h5 class="startingAtLabel label">${memory[i].startingAt}</h5>
+                    <div
+                    class="memoryBlock"
+                    style="width:100px;
+                    height:${blockHeight}vh;
+                    background-color:#${memory[i].colorCode};               
+                    "
+                    >
+                    <p id="blockType">${memory[i].blockType}</p>                
+                    </div>
+                </div>
+                `;
+            }
         }
         
     }
